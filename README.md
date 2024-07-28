@@ -39,7 +39,7 @@ This project is structured to work within a Flask server environment with Gunico
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/yourusername/webserver.git
-    cd my-digital-domain
+    cd webserver
     ```
 
 2. **Install dependencies:**
