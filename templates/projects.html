@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .projects {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+		font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px;
+            position: relative;
+        }
+
+        .project h3 {
+            color: #fff;
+            font-size: 24px;
+		font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #ADD8E6;
+            font-size: 16px;
+		font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            margin: 0;
+        }
+
+        .project ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .project ul li {
+            margin-bottom: 5px;
+            color: #999999;
+		font-size: 14px;
+		font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        }
+
+        .project a {
+            color: #b8b9bb;
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            color: #19d019;
+        }
+
+        .date {
+            position: absolute;
+            top: -20px;
+            left: -2px;
+            background-color: rgba(0, 140, 210, 0.76);
+            padding: 5px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            z-index: 1;
+        }
+
+        .timeline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: rgba(0, 140, 210, 0.76);
+            z-index: 0;
+        }
+
+        .connector {
+            position: absolute;
+            top: -3%;
+            left: -19px;
+            width: 18px;
+            height: 2px;
+            background-color: rgba(0, 140, 210, 0.76);
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='images/logo.svg') }}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('experience') }}">Experience</a></li>
+                <li class="active"><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('journal') }}">Journal</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://drive.google.com/file/d/1zb_eKps3E8QcaE_FxczWApLhLyU4L9RN/view?usp=sharing" target="_blank"><button>Resume</button></a>
+    </header>   
+    <section class="projects">
+        <div class="timeline"></div>
+
+	  <!-- VR Navigating Healthcare-->
+        <div class="project">
+            <div class="date">Jan 2024 - July 2024</div><br>
+            <div class="connector"></div>
+            <h3><a href="#">VR Healthcare</a></h3>
+            <p>Unity, C#</p>
+            <ul>
+                <li>-> Developing a sponsored VR HealthCare application for nursing students to simulate patient care using computer vision.</li>
+                <li>->  Implemented features to allow users with disabilities to interact with the virtual environment more naturally, desigining
+				accesibility features such as adjusting the height of a bed or a wheelchair with dynamic adjustments.</li>
+		    <li>-> Enhanced accessibility and user interaction based on feedback from nursing department. </li>
+            </ul>
+        </div><br>
+
+        <!-- Database Schema-->
+        <div class="project">
+            <div class="date">Nov 2023 - Dec 2023</div><br>
+            <div class="connector"></div>
+            <h3><a href="#">Database Schema</a></h3>
+            <p>MySQL, PHP, HTML, CSS</p>
+            <ul>
+                <li>-> Created MySQL database from scratch.</li>
+                <li>-> Made basic web interface to Insert, Delete, Update, and Delete from the database using PHP via SQL injection.</li>
+            </ul>
+        </div><br>
+
+        <!-- Recipe-Book App -->
+        <div class="project">
+            <div class="date">Aug 2023 - Dec 2023</div><br>
+            <div class="connector"></div>
+            <h3><a href="https://github.com/Dimensional-Icebreaker/Projects.git">Recipe-Book App</a></h3>
+            <p>Java, XML with Android Studio</p>
+            <ul>
+                <li>-> A collection of preconfigured recipes from various sources and cuisines.</li>
+                <li>-> Users can create their own recipe from scratch with their own personalization and name their recipe.</li>
+                <li>-> Use of Firebase API to store app data in the live database; Users can share their own recipe with everyone across the app.</li>
+            </ul>
+        </div><br>
+
+        <!-- ELSA App -->
+        <div class="project">
+            <div class="date">April 2023</div><br>
+            <div class="connector"></div>
+            <h3><a href="https://github.com/Dimensional-Icebreaker/Projects.git">ELSA (Exceptional Laptops and Supercomputers Always) App</a></h3>
+            <p>Java Swing</p>
+            <ul>
+                <li>-> Store management system using object-oriented approach by using Java Swing toolkit.</li>
+                <li>-> Each computer can be crafted to match the exact needs, showing all the available inventories.</li>
+                <li>-> Automated the physical storefronts making it easier to track customers, orders, and computers.</li>
+            </ul>
+        </div><br>
+
+        <!-- Airplane Ticket Price Tracking System -->
+        <div class="project">
+            <div class="date">June 2023</div><br>
+            <div class="connector"></div>
+            <h3><a href="https://github.com/Dimensional-Icebreaker/Projects.git">Airplane Ticket Price Tracking System (SCRAPY)</a></h3>
+            <p>Python Selenium, Pandas</p>
+            <ul>
+                <li>-> Scrapes the web for flight ticket prices and sends a personal mail if the price gets cheap.</li>
+                <li>-> Scheduled the program using crontab to perform multiple scans throughout the day.</li>
+                <li>-> Deployed in my apartment’s Raspberry Pi server that runs 24/7.</li>
+            </ul>
+        </div><br>
+
+        <!-- Movie Ticket Sales System -->
+        <div class="project">
+            <div class="date">November 2022</div><br>
+            <div class="connector"></div>
+            <h3><a href="https://github.com/Dimensional-Icebreaker/Projects.git">Movie Ticket Sales System</a></h3>
+            <p>C</p>
+            <ul>
+                <li>-> Booking tickets from selected theaters using the available zip code.</li>
+                <li>-> Customers can be added to the entry; based on First In First Out (FIFO) principle.</li>
+                <li>-> Use of basic data structures like Linked Lists, Stacks, Queue, and Binary Search Tree (BST).</li>
+            </ul>
+        </div><br>
+    </section>
+</body>
+
+</html>
