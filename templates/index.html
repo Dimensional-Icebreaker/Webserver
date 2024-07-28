@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Digital Domain</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px; 
+            color: rgba(255, 255, 255, 0.7); 
+            background-color: #000; 
+        }
+        h1 {
+            text-align: center; 
+            color: rgba(255, 255, 255, 0.7);
+        }
+        p, li {
+            color: rgba(255, 255, 255, 0.7);
+            text-align: left; /* Ensure other elements are left-aligned */
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; 
+        }
+        .center {
+            text-align: center; /* Center align this class */
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        }
+        a {
+            color: rgba(255, 255, 255, 0.7); 
+            text-decoration: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='images/logo.svg') }}" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('experience') }}">Experience</a></li>
+                <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                <li><a href="{{ url_for('journal') }}">Journal</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="https://drive.google.com/file/d/1zb_eKps3E8QcaE_FxczWApLhLyU4L9RN/view?usp=sharing" target="_blank"><button>Resume</button></a>
+    </header>
+
+    <div class="content">
+        <br><br><br>
+        <h1>Hi! I'm <span class="auto-type"></span></h1><br>
+        <p class="center"><b>Welcome to my Digital Domain!</b></p><br>
+        <p class="center">I'm a Carbon-based lifeform from planet Earth &#128075;</p><br>
+        <p>Hosted on a custom-configured private Linux-Ubuntu 22.04.4 LTS server in my apartment, this site blends simplicity with a touch of personal tech flair!</p>
+        <br><br><br><br>
+	<div id="info-section">
+        <div id="weather">
+            <p id="weather-location"></p>
+            <p id="weather-description"></p>
+            <p id="weather-temperature"></p>
+        </div>
+        <div id="quote">
+            <p id="quote-text"></p>
+            <p id="quote-author"></p>
+        </div>
+    	</div>
+
+        <h2>Currently a CS student from the University of Texas at Arlington</h2><br>
+        <p>I'm passionate about using technology to weave the pathway to a more efficient, dynamic, and sustainable world.</p>
+        <p><a href="https://www.linkedin.com/in/ribesh-joshi/">LinkedIn >></a></p>
+        <br><br><br><br>            
+        <h2>I AM...</h2>
+        <ul class="scrollable-box">
+            <li>Adaptable, curious, and proactive in developing my skills and knowledge.</li><br>            
+            <li>Thrive in hands-on learning and problem-solving with constructive feedback.</li><br>
+            <li>Honest communication skills which allow me to work effectively contributing to a positive work culture.</li><br><br><br>
+        </ul>
+    </div>    
+
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
